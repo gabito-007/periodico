@@ -1,193 +1,336 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>ZONE - Periódico Digital</title>
+
     <link rel="stylesheet" href="estilos.css">
+
 </head>
+
 <body>
 
+    <!-- HEADER -->
     <header class="header-principal">
+
         <div class="logo-top">
             <span class="icono-rayo">⚡</span>
             <h1>ZONE</h1>
         </div>
+
         <div class="header-titulos">
-            <span class="tag-menu">MENÚ</span>
-            <span class="tag-contenido">Contenido Principal</span>
-            <span class="tag-secundario">Contenido secundario o info publicitario</span>
+            <span>MENÚ</span>
+            <span>Contenido Principal</span>
+            <span>Contenido Secundario</span>
         </div>
+
     </header>
 
+    <!-- GRID -->
     <div class="contenedor-grid">
-        
+
+        <!-- MENÚ -->
         <aside class="columna-menu">
-            <div class="brand-box">
-                <div class="sport-zone-logo">
-                    <span class="logo-rayo-mini">⚡</span>
-                    <h2>ZONE</h2>
-                </div>
+
+            <div class="sport-zone-logo">
+                <span>⚡</span>
+                <h2>ZONE</h2>
             </div>
-            
-            <nav class="menu-navegacion">
+
+            <!-- BOTÓN HAMBURGUESA -->
+            <div class="hamburguesa" id="hamburguesa">
+                ☰
+            </div>
+
+            <!-- MENÚ -->
+            <nav class="menu-navegacion" id="menu">
+
                 <a href="#" class="menu-item active">🏠 Inicio</a>
+
                 <a href="#" class="menu-item">⚽ Deportes</a>
+
                 <a href="#" class="menu-item">🔌 Tecnología</a>
+
                 <a href="#" class="menu-item">🎧 Música</a>
-                <a href="#" class="menu-item">🍔 Foodie / Comida</a>
-                <a href="#" class="menu-item">✨ Moda & Estilo</a>
+
+                <a href="#" class="menu-item">🍔 Foodie</a>
+
+                <a href="#" class="menu-item">✨ Moda</a>
+
                 <a href="#" class="menu-item">📺 Multimedia</a>
+
                 <a href="#" class="menu-item">📰 Noticias</a>
+
                 <a href="#" class="menu-item">📩 Contacto</a>
+
             </nav>
 
             <div class="decoracion-lateral">
-                <div class="circulo-decorativo">🎨</div>
+                🎨
             </div>
+
         </aside>
 
+        <!-- CONTENIDO -->
         <main class="columna-principal">
+
+            <!-- BIENVENIDA -->
             <section class="bienvenida-seccion">
-                <h2>¡BIENVENIDO A <span class="destacado-bienvenida">ZONE!</span></h2>
-                <p class="eslogan">Tu sitio favorito para vivir la emoción de las tendencias.</p>
-                <div class="silueta-animada">🏃‍♂️</div>
+
+                <h2>
+                    ¡BIENVENIDO A
+                    <span class="destacado-bienvenida">
+                        ZONE!
+                    </span>
+                </h2>
+
+                <p class="eslogan">
+                    Tu sitio favorito para vivir las tendencias.
+                </p>
+
+                <div class="silueta-animada">
+                    🏃‍♂️
+                </div>
+
             </section>
 
-            <section class="secciones-iconos">
-                <h3 class="titulo-divisor">★ SECCIONES PRINCIPALES ★</h3>
+            <!-- ICONOS -->
+            <section>
+
+                <h3 class="titulo-divisor">
+                    ★ SECCIONES PRINCIPALES ★
+                </h3>
+
                 <div class="grid-iconos">
+
                     <div class="icono-caja c-live">
                         <div class="badge-icon">🔴</div>
                         <span>En vivo</span>
                     </div>
+
                     <div class="icono-caja c-musica">
                         <div class="badge-icon">🎧</div>
-                        <span>Lanzamientos</span>
+                        <span>Música</span>
                     </div>
+
                     <div class="icono-caja c-moda">
                         <div class="badge-icon">🔥</div>
                         <span>Moda</span>
                     </div>
+
                     <div class="icono-caja c-comida">
-                        <div class="badge-icon">🍴</div>
-                        <span>Ruta Sabor</span>
+                        <div class="badge-icon">🍔</div>
+                        <span>Foodie</span>
                     </div>
+
                     <div class="icono-caja c-tech">
                         <div class="badge-icon">📱</div>
-                        <span>Reviews</span>
+                        <span>Tech</span>
                     </div>
+
                 </div>
+
             </section>
 
+            <!-- NOTICIA -->
             <section class="noticia-destacada">
+
                 <div class="noticia-header">
+
                     <span class="icono-mega">📢</span>
+
                     <div>
+
                         <h4>NOTICIA DESTACADA</h4>
-                        <p>La Inteligencia Artificial revoluciona la creación de música y videojuegos este año.</p>
+
+                        <p>
+                            La Inteligencia Artificial revoluciona la música y videojuegos.
+                        </p>
+
                     </div>
+
                 </div>
+
                 <div class="noticia-imagen-mock">
-                    <span>📱 [Gadget del Año]</span>
+                    📱 Gadget del Año
                 </div>
+
             </section>
 
+            <!-- VIDEO -->
             <section class="video-del-dia">
-                <h3 class="titulo-divisor">★ VIDEO DEL DÍA ★</h3>
+
+                <h3 class="titulo-divisor">
+                    ★ VIDEO DEL DÍA ★
+                </h3>
+
                 <div class="video-contenedor">
+
                     <div class="reproductor-falso">
-                        <button id="btnPlay" class="play-button">▶</button>
+
+                        <button id="btnPlay" class="play-button">
+                            ▶
+                        </button>
+
                     </div>
+
                     <div class="video-info">
+
                         <h5>Top 10 de la semana</h5>
-                        <p>Los videos musicales más virales y las mejores tendencias del movimiento urbano actual.</p>
+
+                        <p>
+                            Videos virales y tendencias urbanas.
+                        </p>
+
                     </div>
+
                 </div>
+
             </section>
 
+            <!-- TARJETAS -->
             <section class="tarjetas-destacados">
-                <h3 class="titulo-divisor">★ TENDENCIAS DE LA SEMANA ★</h3>
+
+                <h3 class="titulo-divisor">
+                    ★ TENDENCIAS ★
+                </h3>
+
                 <div class="grid-tarjetas">
+
                     <div class="tarjeta-item border-azul">
+
                         <div class="avatar-mock">🎮</div>
+
                         <h6>Gaming & Tech</h6>
+
                         <p>Comunidad e IA</p>
+
                     </div>
+
                     <div class="tarjeta-item border-naranja">
+
                         <div class="avatar-mock">🎤</div>
+
                         <h6>Música & Moda</h6>
-                        <p>Estilo Streetwear</p>
+
+                        <p>Streetwear</p>
+
                     </div>
+
                     <div class="tarjeta-item border-gris">
+
                         <div class="avatar-mock">🍕</div>
+
                         <h6>Cultura Foodie</h6>
-                        <p>Ruta Gastronómica</p>
+
+                        <p>Ruta gastronómica</p>
+
                     </div>
+
                 </div>
+
             </section>
+
         </main>
 
+        <!-- DERECHA -->
         <aside class="columna-secundaria">
-            
-            <div class="bloque-secundario b-encuesta">
+
+            <!-- ENCUESTA -->
+            <div class="bloque-secundario">
+
                 <h5>ENCUESTA</h5>
-                <p class="pregunta">¿Cuál es tu plan indispensable para el fin de semana?</p>
-                <form id="formEncuesta" class="form-encuesta">
-                    <label><input type="radio" name="plan" value="musica"> 🎧 Escuchar música nueva</label>
-                    <label><input type="radio" name="plan" value="comida"> 🍔 Probar un restaurante</label>
-                    <label><input type="radio" name="plan" value="juegos"> 🎮 Jugar videojuegos</label>
-                    <label><input type="radio" name="plan" value="sneakers"> 👟 Buscar 'sneakers' online</label>
-                    <button type="button" id="btnVotar" class="btn-votar">VOTAR</button>
+
+                <p class="pregunta">
+                    ¿Qué harás este fin de semana?
+                </p>
+
+                <form class="form-encuesta">
+
+                    <label>
+                        <input type="radio" name="plan">
+                        🎧 Música
+                    </label>
+
+                    <label>
+                        <input type="radio" name="plan">
+                        🍔 Restaurante
+                    </label>
+
+                    <label>
+                        <input type="radio" name="plan">
+                        🎮 Videojuegos
+                    </label>
+
+                    <button type="button" id="btnVotar" class="btn-votar">
+                        VOTAR
+                    </button>
+
                 </form>
+
             </div>
 
-            <div class="bloque-secundario b-tienda">
+            <!-- TIENDA -->
+            <div class="bloque-secundario">
+
                 <h5>TIENDA DIGITAL</h5>
+
                 <ul class="lista-tienda">
-                    <li><span>👟</span> Sneakers / Tenis de Colección</li>
-                    <li><span>🎧</span> Audífonos Inalámbricos</li>
-                    <li><span>👕</span> Sudaderas Oversized</li>
-                    <li><span>📱</span> Accesorios Tech & Fundas</li>
+
+                    <li>👟 Sneakers</li>
+
+                    <li>🎧 Audífonos</li>
+
+                    <li>👕 Sudaderas</li>
+
+                    <li>📱 Fundas</li>
+
                 </ul>
-                <button class="btn-tienda">VER TIENDA</button>
+
+                <button class="btn-tienda">
+                    VER TIENDA
+                </button>
+
             </div>
 
-            <div class="bloque-secundario b-redes">
-                <h5>SÍGUENOS EN REDES</h5>
-                <div class="links-redes">
-                    <a href="#" class="red-link">📸 Instagram</a>
-                    <a href="#" class="red-link">🎵 TikTok</a>
-                    <a href="#" class="red-link">📺 YouTube</a>
-                </div>
-            </div>
-
-            <div class="bloque-secundario b-promocion">
-                <h5 class="txt-naranja">¡PROMOCIÓN!</h5>
-                <p>Participa y gana boletos VIP para los mejores conciertos de música urbana, festivales gastronómicos y eventos del año.</p>
-                <div class="ticket-dibujo">
-                    <span>🎫 TICKET</span>
-                </div>
-            </div>
         </aside>
 
     </div>
 
+    <!-- FOOTER -->
     <footer class="footer-principal">
+
         <div class="footer-top">
-            <span class="icono-copa">🏆</span>
+
+            <span>🏆</span>
+
             <h3>ZONE</h3>
+
         </div>
+
         <div class="footer-links">
-            <a href="#">Política de privacidad</a>
-            <a href="#">Términos y condiciones</a>
+
+            <a href="#">Privacidad</a>
+
+            <a href="#">Términos</a>
+
         </div>
+
         <div class="footer-redes-iconos">
-            <span>📸</span> <span>🎵</span> <span>📺</span> <span>👤</span>
+            📸 🎵 📺 👤
         </div>
-        <p class="copyright">© 2026 ZONE – Todos los derechos reservados.</p>
+
+        <p class="copyright">
+            © 2026 ZONE
+        </p>
+
     </footer>
 
     <script src="script.js"></script>
+
 </body>
 </html>
+        
