@@ -1,486 +1,398 @@
-/* ==========================================================================
-   ESTILOS GENERALES Y CONFIGURACIÓN BASE
-   ========================================================================== */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+/* =========================================================
+   ESTILOS GENERALES
+========================================================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI',sans-serif;
 }
 
-body {
-    background-color: #f4f6f9;
-    color: #333;
-    padding: 10px;
+body{
+    background:#f4f6f9;
+    color:#333;
+    padding:10px;
 }
 
-/* Encabezado Técnico Superior */
-.header-principal {
-    background-color: #ffffff;
-    border: 1px solid #ddd;
-    padding: 15px;
-    margin-bottom: 15px;
-    text-align: center;
-    border-radius: 6px;
+/* HEADER */
+
+.header-principal{
+    background:#fff;
+    padding:15px;
+    border-radius:10px;
+    margin-bottom:15px;
+    border:1px solid #ddd;
+    text-align:center;
 }
 
-.logo-top {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-    margin-bottom: 5px;
+.logo-top{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:10px;
 }
 
-.logo-top h1 {
-    font-size: 26px;
-    font-weight: 800;
-    letter-spacing: 1px;
+.logo-top h1{
+    font-size:30px;
 }
 
-.header-titulos {
-    display: flex;
-    justify-content: space-between;
-    border-top: 1px dashed #ccc;
-    padding-top: 8px;
-    font-size: 12px;
-    color: #666;
-    font-weight: bold;
+.header-titulos{
+    display:flex;
+    justify-content:space-between;
+    margin-top:10px;
+    font-size:12px;
+    color:#666;
 }
 
-/* ==========================================================================
-   DISEÑO GRID PRINCIPAL (Para Monitores / Escritorio por defecto)
-   ========================================================================== */
-.contenedor-grid {
-    display: grid;
-    grid-template-columns: 240px 1fr 280px; /* Estructura idéntica de 3 columnas */
-    gap: 15px;
-    max-width: 1400px;
-    margin: 0 auto;
+/* GRID */
+
+.contenedor-grid{
+    display:grid;
+    grid-template-columns:240px 1fr 280px;
+    gap:15px;
 }
 
-/* ==========================================================================
-   COLUMNA IZQUIERDA: MENÚ LATERAL
-   ========================================================================== */
-.columna-menu {
-    background-color: #ffffff;
-    border: 1px solid #ddd;
-    border-radius: 6px;
-    padding: 15px;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
+/* MENU */
+
+.columna-menu{
+    background:#fff;
+    padding:15px;
+    border-radius:10px;
+    border:1px solid #ddd;
 }
 
-.sport-zone-logo {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    border-bottom: 2px solid #333;
-    padding-bottom: 10px;
+.sport-zone-logo{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    margin-bottom:20px;
 }
 
-.menu-navegacion {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
+.menu-navegacion{
+    display:flex;
+    flex-direction:column;
+    gap:10px;
 }
 
-.menu-item {
-    display: block;
-    padding: 10px 12px;
-    color: #444;
-    text-decoration: none;
-    font-weight: 600;
-    font-size: 14px;
-    border-radius: 4px;
-    transition: background 0.2s;
+.menu-item{
+    text-decoration:none;
+    color:#333;
+    padding:12px;
+    border-radius:8px;
+    transition:0.3s;
+    font-weight:bold;
 }
 
-.menu-item:hover {
-    background-color: #f0f2f5;
+.menu-item:hover{
+    background:#ebf5fb;
 }
 
-.menu-item.active {
-    background-color: #1a5276;
-    color: #fff;
+.active{
+    background:#1a5276;
+    color:white;
 }
 
-.decoracion-lateral {
-    margin-top: auto;
-    padding: 20px;
-    text-align: center;
-    background: linear-gradient(135deg, #eaf2f8, #d4e6f1);
-    border-radius: 50%;
-    width: 80px;
-    height: 80px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-left: auto;
-    margin-right: auto;
-    border: 2px dashed #1a5276;
-    font-size: 24px;
+.decoracion-lateral{
+    margin-top:20px;
+    text-align:center;
+    font-size:35px;
 }
 
-/* ==========================================================================
-   COLUMNA CENTRAL: PORTADA Y NOTICIAS
-   ========================================================================== */
-.columna-principal {
-    background-color: #ffffff;
-    border: 1px solid #ddd;
-    border-radius: 6px;
-    padding: 20px;
+/* HAMBURGUESA */
+
+.hamburguesa{
+    display:none;
+    background:#1a5276;
+    color:white;
+    text-align:center;
+    padding:10px;
+    border-radius:8px;
+    cursor:pointer;
+    font-size:28px;
+    margin-bottom:15px;
 }
 
-.bienvenida-seccion {
-    text-align: center;
-    background: linear-gradient(to right, #fdfefe, #ebf5fb);
-    padding: 20px;
-    border-radius: 6px;
-    position: relative;
-    margin-bottom: 20px;
-    border: 1px solid #d4e6f1;
+/* PRINCIPAL */
+
+.columna-principal{
+    background:#fff;
+    padding:20px;
+    border-radius:10px;
+    border:1px solid #ddd;
 }
 
-.bienvenida-seccion h2 {
-    font-size: 26px;
-    color: #2c3e50;
+.bienvenida-seccion{
+    background:#ebf5fb;
+    padding:20px;
+    border-radius:10px;
+    text-align:center;
 }
 
-.destacado-bienvenida {
-    color: #e67e22;
-    font-weight: 900;
+.bienvenida-seccion h2{
+    font-size:28px;
 }
 
-.eslogan {
-    font-size: 14px;
-    color: #555;
-    margin-top: 5px;
+.destacado-bienvenida{
+    color:#e67e22;
 }
 
-.silueta-animada {
-    font-size: 24px;
-    margin-top: 10px;
+.eslogan{
+    margin-top:10px;
 }
 
-/* Divisores de Sección */
-.titulo-divisor {
-    text-align: center;
-    font-size: 13px;
-    color: #1a5276;
-    font-weight: bold;
-    margin: 20px 0 12px 0;
-    letter-spacing: 1px;
+.silueta-animada{
+    font-size:30px;
+    margin-top:10px;
 }
 
-/* Fila de 5 Iconos Cuadrados */
-.grid-iconos {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    gap: 10px;
-    margin-bottom: 20px;
+.titulo-divisor{
+    margin:20px 0;
+    text-align:center;
+    color:#1a5276;
 }
 
-.icono-caja {
-    border: 1px solid #ccc;
-    border-radius: 6px;
-    padding: 10px 5px;
-    text-align: center;
-    font-size: 11px;
-    font-weight: bold;
-    cursor: pointer;
-    transition: transform 0.2s;
+/* ICONOS */
+
+.grid-iconos{
+    display:grid;
+    grid-template-columns:repeat(5,1fr);
+    gap:10px;
 }
 
-.icono-caja:hover { transform: translateY(-2px); }
-
-.badge-icon {
-    font-size: 20px;
-    margin-bottom: 5px;
+.icono-caja{
+    padding:15px;
+    border-radius:10px;
+    text-align:center;
+    border:1px solid #ccc;
 }
 
-/* Colores de bordes */
-.c-live { border-color: #27ae60; background-color: #e8f8f5; }
-.c-musica { border-color: #e74c3c; background-color: #fdedec; }
-.c-moda { border-color: #f1c40f; background-color: #fef9e7; }
-.c-comida { border-color: #9b59b6; background-color: #f5eef8; }
-.c-tech { border-color: #2980b9; background-color: #ebf5fb; }
-
-/* Caja de Noticia Destacada */
-.noticia-destacada {
-    border: 1px solid #a9dfbf;
-    background-color: #f4fbf7;
-    border-radius: 6px;
-    padding: 15px;
-    display: grid;
-    grid-template-columns: 1fr 120px;
-    align-items: center;
-    gap: 15px;
+.badge-icon{
+    font-size:24px;
+    margin-bottom:5px;
 }
 
-.noticia-header {
-    display: flex;
-    gap: 15px;
-    align-items: flex-start;
+.c-live{
+    background:#e8f8f5;
 }
 
-.icono-mega {
-    font-size: 28px;
-    background-color: #fcf3cf;
-    padding: 8px;
-    border-radius: 50%;
+.c-musica{
+    background:#fdedec;
 }
 
-.noticia-header h4 {
-    font-size: 12px;
-    color: #27ae60;
-    margin-bottom: 3px;
+.c-moda{
+    background:#fef9e7;
 }
 
-.noticia-header p {
-    font-size: 14px;
-    font-weight: bold;
+.c-comida{
+    background:#f5eef8;
 }
 
-.noticia-imagen-mock {
-    background-color: #e5e7eb;
-    border: 2px dashed #aaa;
-    height: 80px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 6px;
-    font-size: 10px;
-    text-align: center;
+.c-tech{
+    background:#ebf5fb;
 }
 
-/* Video del Día */
-.video-contenedor {
-    border: 1px solid #ddd;
-    border-radius: 6px;
-    padding: 12px;
-    display: grid;
-    grid-template-columns: 1.2fr 1fr;
-    gap: 15px;
-    background-color: #fafafa;
+/* NOTICIA */
+
+.noticia-destacada{
+    margin-top:20px;
+    background:#f4fbf7;
+    padding:15px;
+    border-radius:10px;
+    display:grid;
+    grid-template-columns:1fr 150px;
+    gap:15px;
+    align-items:center;
 }
 
-.reproductor-falso {
-    background-color: #222;
-    height: 140px;
-    border-radius: 4px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.noticia-imagen-mock{
+    background:#ddd;
+    height:100px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    border-radius:10px;
 }
 
-.play-button {
-    background-color: rgba(255, 255, 255, 0.2);
-    border: 2px solid white;
-    color: white;
-    font-size: 24px;
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    cursor: pointer;
-    transition: background 0.2s;
+/* VIDEO */
+
+.video-contenedor{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:15px;
 }
 
-.play-button:hover {
-    background-color: #e67e22;
-    border-color: #e67e22;
+.reproductor-falso{
+    background:#222;
+    height:200px;
+    border-radius:10px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
 }
 
-.video-info h5 {
-    font-size: 14px;
-    color: #111;
-    margin-bottom: 5px;
+.play-button{
+    width:60px;
+    height:60px;
+    border:none;
+    border-radius:50%;
+    font-size:24px;
+    cursor:pointer;
 }
 
-.video-info p {
-    font-size: 12px;
-    color: #666;
-    line-height: 1.4;
+/* TARJETAS */
+
+.grid-tarjetas{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:15px;
 }
 
-/* Tarjetas Inferiores */
-.grid-tarjetas {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 12px;
+.tarjeta-item{
+    background:#fff;
+    padding:20px;
+    border-radius:10px;
+    text-align:center;
+    border:1px solid #ddd;
 }
 
-.tarjeta-item {
-    border: 1px solid #ddd;
-    border-radius: 6px;
-    padding: 15px 10px;
-    text-align: center;
-    background-color: #fff;
+.avatar-mock{
+    font-size:30px;
+    margin-bottom:10px;
 }
 
-.avatar-mock {
-    font-size: 26px;
-    margin-bottom: 8px;
+.border-azul{
+    border-top:4px solid #3498db;
 }
 
-.tarjeta-item h6 {
-    font-size: 13px;
-    margin-bottom: 2px;
+.border-naranja{
+    border-top:4px solid #e67e22;
 }
 
-.tarjeta-item p {
-    font-size: 11px;
-    color: #777;
+.border-gris{
+    border-top:4px solid #7f8c8d;
 }
 
-.border-azul { border-top: 4px solid #3498db; }
-.border-naranja { border-top: 4px solid #e67e22; }
-.border-gris { border-top: 4px solid #7f8c8d; }
+/* DERECHA */
 
-/* ==========================================================================
-   COLUMNA DERECHA: SECCIONES SECUNDARIAS
-   ========================================================================== */
-.columna-secundaria {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
+.columna-secundaria{
+    display:flex;
+    flex-direction:column;
+    gap:15px;
 }
 
-.bloque-secundario {
-    background-color: #ffffff;
-    border: 1px solid #ddd;
-    border-radius: 6px;
-    padding: 15px;
+.bloque-secundario{
+    background:#fff;
+    padding:15px;
+    border-radius:10px;
+    border:1px solid #ddd;
 }
 
-.bloque-secundario h5 {
-    font-size: 13px;
-    border-bottom: 1px solid #eee;
-    padding-bottom: 6px;
-    margin-bottom: 10px;
+.form-encuesta label{
+    display:block;
+    margin-bottom:10px;
 }
 
-/* Encuesta */
-.b-encuesta { border-left: 4px solid #8e44ad; }
-.pregunta { font-size: 12px; font-weight: bold; margin-bottom: 8px; color: #444; }
-.form-encuesta label {
-    display: block;
-    font-size: 11px;
-    margin-bottom: 6px;
-    cursor: pointer;
+.btn-votar,
+.btn-tienda{
+    width:100%;
+    padding:10px;
+    border:none;
+    border-radius:8px;
+    color:white;
+    font-weight:bold;
+    cursor:pointer;
 }
 
-.btn-votar, .btn-tienda {
-    width: 100%;
-    padding: 8px;
-    border: none;
-    border-radius: 4px;
-    color: white;
-    font-weight: bold;
-    font-size: 11px;
-    cursor: pointer;
-    margin-top: 5px;
-}
-.btn-votar { background-color: #8e44ad; }
-
-/* Tienda */
-.b-tienda { border-left: 4px solid #27ae60; }
-.lista-tienda { list-style: none; font-size: 11px; }
-.lista-tienda li { margin-bottom: 8px; display: flex; align-items: center; gap: 6px; }
-.btn-tienda { background-color: #27ae60; }
-
-/* Redes */
-.b-redes { border-left: 4px solid #e74c3c; }
-.links-redes { display: flex; flex-direction: column; gap: 6px; }
-.red-link { font-size: 12px; color: #333; text-decoration: none; }
-
-/* Promoción */
-.b-promocion { border: 1px solid #f39c12; background-color: #fef9e7; text-align: center; }
-.b-promocion p { font-size: 11px; line-height: 1.4; margin-bottom: 8px; }
-.txt-naranja { color: #d35400; }
-.ticket-dibujo {
-    border: 2px dashed #d35400;
-    padding: 8px;
-    display: inline-block;
-    font-weight: bold;
-    font-size: 12px;
-    background-color: #fff;
-    color: #d35400;
+.btn-votar{
+    background:#8e44ad;
 }
 
-/* ==========================================================================
-   PIE DE PÁGINA (FOOTER)
-   ========================================================================== */
-.footer-principal {
-    margin-top: 20px;
-    background-color: #fff;
-    border: 1px solid #ddd;
-    border-radius: 6px;
-    padding: 20px;
-    text-align: center;
+.btn-tienda{
+    background:#27ae60;
 }
 
-.footer-top {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 8px;
-    margin-bottom: 10px;
+/* FOOTER */
+
+.footer-principal{
+    background:#fff;
+    margin-top:20px;
+    padding:20px;
+    border-radius:10px;
+    border:1px solid #ddd;
+    text-align:center;
 }
 
-.footer-links a {
-    font-size: 12px;
-    color: #666;
-    text-decoration: none;
-    margin: 0 10px;
+.footer-links{
+    margin:10px 0;
 }
 
-.footer-redes-iconos {
-    font-size: 18px;
-    word-spacing: 15px;
-    margin: 10px 0;
+.footer-links a{
+    margin:0 10px;
+    text-decoration:none;
+    color:#555;
 }
 
-.copyright {
-    font-size: 11px;
-    color: #999;
-    border-top: 1px solid #eee;
-    padding-top: 10px;
-}
+/* =========================================================
+   RESPONSIVE
+========================================================= */
 
-/* ==========================================================================
-   RESPONSIVIDAD CON @MEDIA (MÓVILES)
-   ========================================================================== */
-@media (max-width: 768px) {
-    .contenedor-grid {
-        grid-template-columns: 1fr;
-        gap: 12px;
+@media screen and (max-width:768px){
+
+    .contenedor-grid{
+        grid-template-columns:1fr;
     }
 
-    .columna-menu { order: 1; }
-    .columna-principal { order: 2; }
-    .columna-secundaria { order: 3; }
-
-    .grid-iconos {
-        grid-template-columns: repeat(3, 1fr);
+    .header-titulos{
+        display:none;
     }
 
-    .noticia-destacada {
-        grid-template-columns: 1fr;
-        text-align: center;
+    .hamburguesa{
+        display:block;
     }
 
-    .noticia-header {
-        flex-direction: column;
-        align-items: center;
+    .menu-navegacion{
+        display:none;
+        flex-direction:column;
+        margin-top:10px;
     }
 
-    .video-contenedor, .grid-tarjetas {
-        grid-template-columns: 1fr;
+    .menu-navegacion.activo{
+        display:flex;
     }
 
-    .header-titulos {
-        display: none;
+    .grid-iconos{
+        grid-template-columns:1fr 1fr;
     }
+
+    .video-contenedor{
+        grid-template-columns:1fr;
+    }
+
+    .grid-tarjetas{
+        grid-template-columns:1fr;
+    }
+
+    .noticia-destacada{
+        grid-template-columns:1fr;
+    }
+
+}
+
+/* CELULARES */
+
+@media screen and (max-width:480px){
+
+    .grid-iconos{
+        grid-template-columns:1fr;
+    }
+
+    .logo-top h1{
+        font-size:22px;
+    }
+
+    .bienvenida-seccion h2{
+        font-size:20px;
+    }
+
 }
