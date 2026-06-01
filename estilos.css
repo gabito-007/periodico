@@ -11,8 +11,6 @@ body{
     padding:10px;
 }
 
-/* HEADER */
-
 .header-principal{
     background:#fff;
     padding:15px;
@@ -41,15 +39,11 @@ body{
     color:#666;
 }
 
-/* GRID */
-
 .contenedor-grid{
     display:grid;
     grid-template-columns:240px 1fr 280px;
     gap:15px;
 }
-
-/* MENU */
 
 .columna-menu{
     background:#fff;
@@ -95,8 +89,6 @@ body{
     font-size:35px;
 }
 
-/* HAMBURGUESA */
-
 .hamburguesa{
     display:none;
     background:#1a5276;
@@ -108,8 +100,6 @@ body{
     font-size:28px;
     margin-bottom:15px;
 }
-
-/* PRINCIPAL */
 
 .columna-principal{
     background:#fff;
@@ -148,8 +138,6 @@ body{
     color:#1a5276;
 }
 
-/* NOTICIA */
-
 .noticia-destacada{
     margin-top:20px;
     background:#f4fbf7;
@@ -169,8 +157,6 @@ body{
     align-items:center;
     border-radius:10px;
 }
-
-/* VIDEO */
 
 .video-contenedor{
     display:grid;
@@ -195,8 +181,6 @@ body{
     font-size:24px;
     cursor:pointer;
 }
-
-/* TARJETAS */
 
 .grid-tarjetas{
     display:grid;
@@ -229,8 +213,6 @@ body{
     border-top:4px solid #7f8c8d;
 }
 
-/* DERECHA */
-
 .columna-secundaria{
     display:flex;
     flex-direction:column;
@@ -249,8 +231,7 @@ body{
     margin-bottom:10px;
 }
 
-.btn-votar,
-.btn-tienda{
+.btn-votar{
     width:100%;
     padding:10px;
     border:none;
@@ -258,17 +239,8 @@ body{
     color:white;
     font-weight:bold;
     cursor:pointer;
-}
-
-.btn-votar{
     background:#8e44ad;
 }
-
-.btn-tienda{
-    background:#27ae60;
-}
-
-/* FOOTER */
 
 .footer-principal{
     background:#fff;
@@ -288,10 +260,6 @@ body{
     text-decoration:none;
     color:#555;
 }
-
-/* =========================================================
-   RESPONSIVE
-========================================================= */
 
 @media screen and (max-width:768px){
 
@@ -329,8 +297,6 @@ body{
         grid-template-columns:1fr;
     }
 }
-
-/* CELULARES */
 
 @media screen and (max-width:480px){
 
