@@ -4,7 +4,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const hamburguesa = document.getElementById('hamburguesa');
     const menu = document.getElementById('menu');
 
-    // Validación defensiva por si acaso el elemento no existe en alguna página
     if (hamburguesa && menu) {
         hamburguesa.addEventListener('click', () => {
             menu.classList.toggle('activo');
@@ -16,11 +15,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (btnVotar) {
         btnVotar.addEventListener('click', () => {
-            // Modernización: Usamos querySelector para encontrar directamente la opción marcada
+            // Buscamos directamente el radio button seleccionado usando selectores avanzados
             const opcionSeleccionada = document.querySelector('input[name="plan"]:checked');
 
             if (opcionSeleccionada) {
-                // Obtenemos el texto que acompaña al radio button limpiando espacios
+                // Obtenemos el texto de la etiqueta contenedora eliminando espacios adicionales
                 const respuestaText = opcionSeleccionada.parentElement.textContent.trim();
                 alert(`¡Gracias por votar por: ${respuestaText}!`);
             } else {
@@ -29,12 +28,12 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // 3. REPRODUCTOR DE VIDEO
+    // 3. REPRODUCTOR DE VIDEO (Play / Pause toggle)
     const btnPlay = document.getElementById('btnPlay');
 
     if (btnPlay) {
         btnPlay.addEventListener('click', function() {
-            // Alternamos el estado usando un operador ternario (más limpio que el if-else)
+            // Un operador ternario alterna el símbolo de reproducción de manera limpia
             this.textContent = (this.textContent === '▶') ? '⏸' : '▶';
         });
     }
@@ -44,18 +43,18 @@ document.addEventListener('DOMContentLoaded', () => {
 
     itemsMenu.forEach(item => {
         item.addEventListener('click', function(e) {
-            // Opcional: Evita el salto brusco si usas enlaces vacíos "#"
+            // Evita saltos molestos del navegador al usar href="#"
             if (this.getAttribute('href') === '#') {
                 e.preventDefault();
             }
 
-            // Quitamos la clase al que la tenga actualmente
+            // Remueve la clase del enlace que la tenga activa actualmente
             document.querySelector('.menu-item.active')?.classList.remove('active');
             
-            // Se la asignamos al elemento clickeado
+            // Se le asigna la clase al enlace clickeado
             this.classList.add('active');
 
-            // Opcional: Cierra el menú hamburguesa automáticamente tras elegir sección en móvil
+            // Cierra el menú automáticamente en el diseño móvil al hacer click en una sección
             menu?.classList.remove('activo');
         });
     });
