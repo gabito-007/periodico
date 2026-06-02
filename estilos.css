@@ -1,3 +1,8 @@
+/* Añadido para que la pantalla se deslice suavemente al pulsar el menú */
+html {
+    scroll-behavior: smooth;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -72,7 +77,7 @@ body {
     border-radius: 8px;
     transition: 0.3s;
     font-weight: bold;
-    cursor: pointer; /* Corregido: Muestra la mano al pasar el cursor */
+    cursor: pointer;
 }
 
 .menu-item:hover {
@@ -174,7 +179,6 @@ body {
     align-items: center;
 }
 
-/* Corregido: Botón Play con fondo, centrado de ícono y transición suave */
 .play-button {
     width: 60px;
     height: 60px;
@@ -290,7 +294,6 @@ body {
         display: block;
     }
 
-    /* Corregido: Se añadió color de fondo blanco y ancho completo */
     .menu-navegacion {
         display: none;
         flex-direction: column;
