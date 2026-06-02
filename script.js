@@ -1,89 +1,62 @@
 document.addEventListener('DOMContentLoaded', () => {
 
-    // MENÚ HAMBURGUESA
-
+    // 1. MENÚ HAMBURGUESA
     const hamburguesa = document.getElementById('hamburguesa');
-
     const menu = document.getElementById('menu');
 
-    hamburguesa.addEventListener('click', () => {
+    // Validación defensiva por si acaso el elemento no existe en alguna página
+    if (hamburguesa && menu) {
+        hamburguesa.addEventListener('click', () => {
+            menu.classList.toggle('activo');
+        });
+    }
 
-        menu.classList.toggle('activo');
-
-    });
-
-    // BOTÓN VOTAR
-
+    // 2. BOTÓN VOTAR (Encuesta)
     const btnVotar = document.getElementById('btnVotar');
 
-    if(btnVotar){
-
+    if (btnVotar) {
         btnVotar.addEventListener('click', () => {
+            // Modernización: Usamos querySelector para encontrar directamente la opción marcada
+            const opcionSeleccionada = document.querySelector('input[name="plan"]:checked');
 
-            const opciones = document.getElementsByName('plan');
-
-            let seleccionado = false;
-
-            for(const opcion of opciones){
-
-                if(opcion.checked){
-
-                    seleccionado = true;
-
-                }
-
+            if (opcionSeleccionada) {
+                // Obtenemos el texto que acompaña al radio button limpiando espacios
+                const respuestaText = opcionSeleccionada.parentElement.textContent.trim();
+                alert(`¡Gracias por votar por: ${respuestaText}!`);
+            } else {
+                alert('Por favor, selecciona una opción antes de votar.');
             }
-
-            if(seleccionado){
-
-                alert('¡Gracias por votar!');
-
-            }else{
-
-                alert('Selecciona una opción.');
-
-            }
-
         });
-
     }
 
-    // VIDEO
-
+    // 3. REPRODUCTOR DE VIDEO
     const btnPlay = document.getElementById('btnPlay');
 
-    if(btnPlay){
-
-        btnPlay.addEventListener('click', function(){
-
-            if(this.textContent === '▶'){
-
-                this.textContent = '⏸';
-
-            }else{
-
-                this.textContent = '▶';
-
-            }
-
+    if (btnPlay) {
+        btnPlay.addEventListener('click', function() {
+            // Alternamos el estado usando un operador ternario (más limpio que el if-else)
+            this.textContent = (this.textContent === '▶') ? '⏸' : '▶';
         });
-
     }
 
-    // MENÚ ACTIVO
-
+    // 4. INTERCAMBIO DE CLASE ACTIVA EN EL MENÚ
     const itemsMenu = document.querySelectorAll('.menu-item');
 
     itemsMenu.forEach(item => {
+        item.addEventListener('click', function(e) {
+            // Opcional: Evita el salto brusco si usas enlaces vacíos "#"
+            if (this.getAttribute('href') === '#') {
+                e.preventDefault();
+            }
 
-        item.addEventListener('click', function(){
-
-            itemsMenu.forEach(i => i.classList.remove('active'));
-
+            // Quitamos la clase al que la tenga actualmente
+            document.querySelector('.menu-item.active')?.classList.remove('active');
+            
+            // Se la asignamos al elemento clickeado
             this.classList.add('active');
 
+            // Opcional: Cierra el menú hamburguesa automáticamente tras elegir sección en móvil
+            menu?.classList.remove('activo');
         });
-
     });
-
 });
