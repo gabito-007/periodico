@@ -1,8 +1,3 @@
-/* Añadido para que la pantalla se deslice suavemente al pulsar el menú */
-html {
-    scroll-behavior: smooth;
-}
-
 * {
     margin: 0;
     padding: 0;
@@ -15,6 +10,23 @@ body {
     color: #333;
     padding: 10px;
 }
+
+/* --- CLASES CONTROLADORAS DE VISTA (SPA) --- */
+.seccion-contenido {
+    display: none; /* Oculta todas las páginas por defecto */
+}
+
+.seccion-contenido.active-view {
+    display: block; /* Muestra solo la página activa */
+    animation: fadeIn 0.4s ease; /* Efecto visual suave de aparición */
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* ------------------------------------------- */
 
 .header-principal {
     background: #fff;
@@ -32,9 +44,7 @@ body {
     gap: 10px;
 }
 
-.logo-top h1 {
-    font-size: 30px;
-}
+.logo-top h1 { font-size: 30px; }
 
 .header-titulos {
     display: flex;
@@ -80,9 +90,7 @@ body {
     cursor: pointer;
 }
 
-.menu-item:hover {
-    background: #ebf5fb;
-}
+.menu-item:hover { background: #ebf5fb; }
 
 .active {
     background: #1a5276;
@@ -121,28 +129,11 @@ body {
     text-align: center;
 }
 
-.bienvenida-seccion h2 {
-    font-size: 28px;
-}
-
-.destacado-bienvenida {
-    color: #e67e22;
-}
-
-.eslogan {
-    margin-top: 10px;
-}
-
-.silueta-animada {
-    font-size: 30px;
-    margin-top: 10px;
-}
-
-.titulo-divisor {
-    margin: 20px 0;
-    text-align: center;
-    color: #1a5276;
-}
+.bienvenida-seccion h2 { font-size: 28px; }
+.destacado-bienvenida { color: #e67e22; }
+.eslogan { margin-top: 10px; }
+.silueta-animada { font-size: 30px; margin-top: 10px; }
+.titulo-divisor { margin: 20px 0; text-align: center; color: #1a5276; }
 
 .noticia-destacada {
     margin-top: 20px;
@@ -194,9 +185,7 @@ body {
     transition: transform 0.2s ease;
 }
 
-.play-button:hover {
-    transform: scale(1.1);
-}
+.play-button:hover { transform: scale(1.1); }
 
 .grid-tarjetas {
     display: grid;
@@ -212,40 +201,14 @@ body {
     border: 1px solid #ddd;
 }
 
-.avatar-mock {
-    font-size: 30px;
-    margin-bottom: 10px;
-}
+.avatar-mock { font-size: 30px; margin-bottom: 10px; }
+.border-azul { border-top: 4px solid #3498db; }
+.border-naranja { border-top: 4px solid #e67e22; }
+.border-gris { border-top: 4px solid #7f8c8d; }
 
-.border-azul {
-    border-top: 4px solid #3498db;
-}
-
-.border-naranja {
-    border-top: 4px solid #e67e22;
-}
-
-.border-gris {
-    border-top: 4px solid #7f8c8d;
-}
-
-.columna-secundaria {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-}
-
-.bloque-secundario {
-    background: #fff;
-    padding: 15px;
-    border-radius: 10px;
-    border: 1px solid #ddd;
-}
-
-.form-encuesta label {
-    display: block;
-    margin-bottom: 10px;
-}
+.columna-secundaria { display: flex; flex-direction: column; gap: 15px; }
+.bloque-secundario { background: #fff; padding: 15px; border-radius: 10px; border: 1px solid #ddd; }
+.form-encuesta label { display: block; margin-bottom: 10px; }
 
 .btn-votar {
     width: 100%;
@@ -267,33 +230,14 @@ body {
     text-align: center;
 }
 
-.footer-links {
-    margin: 10px 0;
-}
+.footer-links { margin: 10px 0; }
+.footer-links a { margin: 0 10px; text-decoration: none; color: #555; }
 
-.footer-links a {
-    margin: 0 10px;
-    text-decoration: none;
-    color: #555;
-}
-
-/* ==========================================
-   MEDIA QUERIES (RESPONSIVO Y MOBILE)
-   ========================================== */
+/* --- RESPONSIVE --- */
 @media screen and (max-width: 768px) {
-
-    .contenedor-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .header-titulos {
-        display: none;
-    }
-
-    .hamburguesa {
-        display: block;
-    }
-
+    .contenedor-grid { grid-template-columns: 1fr; }
+    .header-titulos { display: none; }
+    .hamburguesa { display: block; }
     .menu-navegacion {
         display: none;
         flex-direction: column;
@@ -301,31 +245,13 @@ body {
         background: #fff;
         width: 100%;
     }
-
-    .menu-navegacion.activo {
-        display: flex;
-    }
-
-    .video-contenedor {
-        grid-template-columns: 1fr;
-    }
-
-    .grid-tarjetas {
-        grid-template-columns: 1fr;
-    }
-
-    .noticia-destacada {
-        grid-template-columns: 1fr;
-    }
+    .menu-navegacion.activo { display: flex; }
+    .video-contenedor { grid-template-columns: 1fr; }
+    .grid-tarjetas { grid-template-columns: 1fr; }
+    .noticia-destacada { grid-template-columns: 1fr; }
 }
 
 @media screen and (max-width: 480px) {
-
-    .logo-top h1 {
-        font-size: 22px;
-    }
-
-    .bienvenida-seccion h2 {
-        font-size: 20px;
-    }
+    .logo-top h1 { font-size: 22px; }
+    .bienvenida-seccion h2 { font-size: 20px; }
 }
