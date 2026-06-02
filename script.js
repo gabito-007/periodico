@@ -35,18 +35,30 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // 4. FUNCIONALIDAD DEL MENÚ (MARCAR ACTIVO Y CERRAR EN MÓVIL)
+    // 4. CAMBIO DINÁMICO DE APARTADOS/PÁGINAS (SPA)
     const itemsMenu = document.querySelectorAll('.menu-item');
+    const vistasContenido = document.querySelectorAll('.seccion-contenido');
 
     itemsMenu.forEach(item => {
-        item.addEventListener('click', function() {
-            // 1. Quitamos la clase 'active' de cualquier otro botón anterior
+        item.addEventListener('click', function(e) {
+            e.preventDefault(); // Evitamos cualquier comportamiento extraño de enlaces
+
+            // A) Intercambiar la clase active visual en los botones del menú
             document.querySelector('.menu-item.active')?.classList.remove('active');
-            
-            // 2. Le agregamos 'active' (color azul) al botón presionado
             this.classList.add('active');
 
-            // 3. Si estamos en móvil, cerramos el menú automáticamente al cambiar de sección
+            // B) Obtener el ID del apartado que queremos abrir
+            const paginaObjetivoId = this.getAttribute('data-target');
+
+            // C) Ocultar la sección que estaba visible e iluminar la nueva
+            document.querySelector('.seccion-contenido.active-view')?.classList.remove('active-view');
+            
+            const paginaObjetivo = document.getElementById(paginaObjetivoId);
+            if (paginaObjetivo) {
+                paginaObjetivo.classList.add('active-view');
+            }
+
+            // D) Si estamos en diseño móvil, colapsamos el menú de hamburguesa
             if (menu) {
                 menu.classList.remove('activo');
             }
