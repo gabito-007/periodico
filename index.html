@@ -13,7 +13,6 @@
         <span class="icono-rayo">⚡</span>
         <h1>ZONE</h1>
     </div>
-
     <div class="header-titulos">
         <span>MENÚ</span>
         <span>Contenido Principal</span>
@@ -32,15 +31,15 @@
         <div class="hamburguesa" id="hamburguesa">☰</div>
 
         <nav class="menu-navegacion" id="menu">
-            <a href="#inicio" class="menu-item active">🏠 Inicio</a>
-            <a href="#tendencias" class="menu-item">⚽ Deportes</a>
-            <a href="#tendencias" class="menu-item">🔌 Tecnología</a>
-            <a href="#tendencias" class="menu-item">🎧 Música</a>
-            <a href="#tendencias" class="menu-item">🍔 Foodie</a>
-            <a href="#tendencias" class="menu-item">✨ Moda</a>
-            <a href="#multimedia" class="menu-item">📺 Multimedia</a>
-            <a href="#noticias" class="menu-item">📰 Noticias</a>
-            <a href="#encuesta" class="menu-item">📩 Contacto</a>
+            <a href="#" class="menu-item active" data-target="inicio-page">🏠 Inicio</a>
+            <a href="#" class="menu-item" data-target="deportes-page">⚽ Deportes</a>
+            <a href="#" class="menu-item" data-target="tecnologia-page">🔌 Tecnología</a>
+            <a href="#" class="menu-item" data-target="musica-page">🎧 Música</a>
+            <a href="#" class="menu-item" data-target="foodie-page">🍔 Foodie</a>
+            <a href="#" class="menu-item" data-target="moda-page">✨ Moda</a>
+            <a href="#" class="menu-item" data-target="multimedia-page">📺 Multimedia</a>
+            <a href="#" class="menu-item" data-target="noticias-page">📰 Noticias</a>
+            <a href="#" class="menu-item" data-target="contacto-page">📩 Contacto</a>
         </nav>
 
         <div class="decoracion-lateral">🎨</div>
@@ -48,81 +47,110 @@
 
     <main class="columna-principal">
 
-        <section id="inicio" class="bienvenida-seccion">
-            <h2>¡BIENVENIDO A <span class="destacado-bienvenida">ZONE!</span></h2>
-            <p class="eslogan">Tu sitio favorito para vivir las tendencias.</p>
-            <div class="silueta-animada">🏃‍♂️</div>
-        </section>
+        <div id="inicio-page" class="seccion-contenido active-view">
+            <section class="bienvenida-seccion">
+                <h2>¡BIENVENIDO A <span class="destacado-bienvenida">ZONE!</span></h2>
+                <p class="eslogan">Tu sitio favorito para vivir las tendencias.</p>
+                <div class="silueta-animada">🏃‍♂️</div>
+            </section>
 
-        <section id="noticias" class="noticia-destacada">
-            <div class="noticia-header">
-                <span class="icono-mega">📢</span>
-                <div>
-                    <h4>NOTICIA DESTACADA</h4>
-                    <p>La Inteligencia Artificial revoluciona la música y videojuegos.</p>
+            <section class="noticia-destacada">
+                <div class="noticia-header">
+                    <span class="icono-mega">📢</span>
+                    <div>
+                        <h4>NOTICIA DESTACADA</h4>
+                        <p>La Inteligencia Artificial revoluciona la música y videojuegos.</p>
+                    </div>
                 </div>
-            </div>
+                <div class="noticia-imagen-mock">📱 Gadget del Año</div>
+            </section>
 
-            <div class="noticia-imagen-mock">
-                📱 Gadget del Año
-            </div>
-        </section>
-
-        <section id="multimedia" class="video-del-dia">
-            <h3 class="titulo-divisor">★ VIDEO DEL DÍA ★</h3>
-
-            <div class="video-contenedor">
-                <div class="reproductor-falso">
-                    <button id="btnPlay" class="play-button">▶</button>
+            <section class="video-del-dia">
+                <h3 class="titulo-divisor">★ VIDEO DEL DÍA ★</h3>
+                <div class="video-contenedor">
+                    <div class="reproductor-falso">
+                        <button id="btnPlay" class="play-button">▶</button>
+                    </div>
+                    <div class="video-info">
+                        <h5>Top 10 de la semana</h5>
+                        <p>Videos virales y tendencias urbanas.</p>
+                    </div>
                 </div>
+            </section>
 
-                <div class="video-info">
-                    <h5>Top 10 de la semana</h5>
-                    <p>Videos virales y tendencias urbanas.</p>
+            <section class="tarjetas-destacados">
+                <h3 class="titulo-divisor">★ TENDENCIAS ★</h3>
+                <div class="grid-tarjetas">
+                    <div class="tarjeta-item border-azul">
+                        <div class="avatar-mock">🎮</div>
+                        <h6>Gaming & Tech</h6>
+                        <p>Comunidad e IA</p>
+                    </div>
+                    <div class="tarjeta-item border-naranja">
+                        <div class="avatar-mock">🎤</div>
+                        <h6>Música & Moda</h6>
+                        <p>Streetwear</p>
+                    </div>
+                    <div class="tarjeta-item border-gris">
+                        <div class="avatar-mock">🍕</div>
+                        <h6>Cultura Foodie</h6>
+                        <p>Ruta gastronómica</p>
+                    </div>
                 </div>
-            </div>
-        </section>
+            </section>
+        </div>
 
-        <section id="tendencias" class="tarjetas-destacados">
-            <h3 class="titulo-divisor">★ TENDENCIAS ★</h3>
+        <div id="deportes-page" class="seccion-contenido">
+            <h3 class="titulo-divisor">⚽ ZONA DEPORTES</h3>
+            <p>Bienvenido al apartado de Deportes. Aquí verás las últimas noticias del fútbol, baloncesto y más.</p>
+        </div>
 
-            <div class="grid-tarjetas">
-                <div class="tarjeta-item border-azul">
-                    <div class="avatar-mock">🎮</div>
-                    <h6>Gaming & Tech</h6>
-                    <p>Comunidad e IA</p>
-                </div>
+        <div id="tecnologia-page" class="seccion-contenido">
+            <h3 class="titulo-divisor">🔌 ZONA TECNOLOGÍA</h3>
+            <p>Análisis de gadgets, software, hardware y el avance de la Inteligencia Artificial.</p>
+        </div>
 
-                <div class="tarjeta-item border-naranja">
-                    <div class="avatar-mock">🎤</div>
-                    <h6>Música & Moda</h6>
-                    <p>Streetwear</p>
-                </div>
+        <div id="musica-page" class="seccion-contenido">
+            <h3 class="titulo-divisor">🎧 ZONA MÚSICA</h3>
+            <p>Lanzamientos de álbumes, entrevistas y las playlists urbanas del momento.</p>
+        </div>
 
-                <div class="tarjeta-item border-gris">
-                    <div class="avatar-mock">🍕</div>
-                    <h6>Cultura Foodie</h6>
-                    <p>Ruta gastronómica</p>
-                </div>
-            </div>
-        </section>
+        <div id="foodie-page" class="seccion-contenido">
+            <h3 class="titulo-divisor">🍔 ZONA FOODIE</h3>
+            <p>Reseñas de restaurantes, recetas rápidas y rutas gastronómicas urbanas.</p>
+        </div>
+
+        <div id="moda-page" class="seccion-contenido">
+            <h3 class="titulo-divisor">✨ ZONA MODA</h3>
+            <p>Tendencias de Streetwear, pasarelas y marcas independientes.</p>
+        </div>
+
+        <div id="multimedia-page" class="seccion-contenido">
+            <h3 class="titulo-divisor">📺 ZONA MULTIMEDIA</h3>
+            <p>Disfruta de nuestros podcasts, directos y videos exclusivos.</p>
+        </div>
+
+        <div id="noticias-page" class="seccion-contenido">
+            <h3 class="titulo-divisor">📰 NOTICIAS GENERALES</h3>
+            <p>Toda la actualidad del mundo minuto a minuto.</p>
+        </div>
+
+        <div id="contacto-page" class="seccion-contenido">
+            <h3 class="titulo-divisor">📩 CONTACTO</h3>
+            <p>¿Quieres colaborar con ZONE? Escríbenos a contacto@zone.com</p>
+        </div>
 
     </main>
 
     <aside class="columna-secundaria">
-        <div id="encuesta" class="bloque-secundario">
+        <div class="bloque-secundario">
             <h5>ENCUESTA</h5>
-
             <p class="pregunta">¿Qué harás este fin de semana?</p>
-
             <form class="form-encuesta">
                 <label><input type="radio" name="plan"> 🎧 Música</label>
                 <label><input type="radio" name="plan"> 🍔 Restaurante</label>
                 <label><input type="radio" name="plan"> 🎮 Videojuegos</label>
-
-                <button type="button" id="btnVotar" class="btn-votar">
-                    VOTAR
-                </button>
+                <button type="button" id="btnVotar" class="btn-votar">VOTAR</button>
             </form>
         </div>
     </aside>
@@ -130,18 +158,9 @@
 </div>
 
 <footer class="footer-principal">
-    <div class="footer-top">
-        <span>🏆</span>
-        <h3>ZONE</h3>
-    </div>
-
-    <div class="footer-links">
-        <a href="#">Privacidad</a>
-        <a href="#">Términos</a>
-    </div>
-
+    <div class="footer-top"><span>🏆</span><h3>ZONE</h3></div>
+    <div class="footer-links"><a href="#">Privacidad</a><a href="#">Términos</a></div>
     <div class="footer-redes-iconos">📸 🎵 📺 👤</div>
-
     <p class="copyright">© 2026 ZONE</p>
 </footer>
 
